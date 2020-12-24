@@ -1,0 +1,25 @@
+
+<!--<my-table></my-table> -->
+<!--mySecondC></mySecondC>-->
+<p>This is the home page</p> <br/>
+<h1>Компоненты</h1>
+
+<a [routerLink]="['my-table']">компонент-my-table</a> <br/>
+<a [routerLink]="['mySecondC']">компонент-mySecondC</a><br/>
+
+
+<!--с помощю output по событию новому вызываем метод addItem-->
+<app-my-table (newItemEvent)="addItem($event)"></app-my-table>
+
+  <td>
+    <tr *ngFor="let item of items; let i = index">{{item}}<button (click)="removeFromList(i)">delete</button></tr>
+  </td>
+       
+           
+       
+   
+   
+
+
+
+<router-outlet></router-outlet>
